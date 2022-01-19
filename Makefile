@@ -81,13 +81,13 @@ clean:
 # you must uncomment the appropriate line after the header getkey.o:
 
 getkey.o:
-	echo "Do not forget to uncomment a line below for your OS"
+	# echo "Do not forget to uncomment a line below for your OS"
 	# compile utilities/GETKEY for command line editing
 	# uncomment the line for the kind of Linux system you have
 	# Mac >>
 	#$(C) -c $(FCOPT) -DBSD src/utilities/GETKEY/getkey.c
 	# Linux >>
-	#$(C) -c $(FCOPT) -DLinux src/utilities/GETKEY/getkey.c
+	$(C) -c $(FCOPT) -DLinux src/utilities/GETKEY/getkey.c
 	# other UNIX systems >>
 	#$(C) -c $(FCOPT) -DG77 src/utilities/GETKEY/getkey.c
 	# CYGWIN >> 
